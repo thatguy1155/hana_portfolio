@@ -12,8 +12,8 @@ const projectList = [
     // More projects...
   ],[
     // Add your project data here
-    { id: 1, title: 'Project 3', imageUrl: 'images/image_3.jpg', text: projectText.project2 },
-    { id: 2, title: 'Project 4', imageUrl: 'images/image_4.jpg', text: projectText.project2 },
+    { id: 3, title: 'Project 3', imageUrl: 'images/image_3.jpg', text: projectText.project2 },
+    { id: 4, title: 'Project 4', imageUrl: 'images/image_4.jpg', text: projectText.project2 },
     // More projects...
   ],
 ]

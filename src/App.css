@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   height: 80vh; /* Full height of the viewport */
-  background-color: #f0f0f0; /* Optional: to see the centering effect clearly */
+  background-color: #fff; /* Optional: to see the centering effect clearly */
 }
 .carousel .slide img {
   max-width: 80%; /* Adjust the width as needed */

@@ -6,6 +6,7 @@ import { toggleMenu } from './redux/actions';
 import { updatePage } from './portfolioSlice';
 import { updateText } from './textManager';
 import text from './data/text.json'
+import FloatingMenu from './components/FloatingMenu';
 import './Toolbar.css';
 
 const Toolbar = () => {
@@ -26,7 +27,6 @@ const Toolbar = () => {
     dispatch(updatePage({index:1}));
     dispatch(updateText(text.pageText[1]));
   };
-  const WorksButton = () => <li className = {location.pathname === '/' ? '' : 'hidden'}><a href="./portfolio">Works</a></li>;
   const AboutButton = () => <li className = {location.pathname === '/' ? 'hidden' : ''}><a href="#about"onClick={page1}>About</a></li>;
   const ServicesButton = () => <li className = {location.pathname === '/' ? 'hidden' : ''}><a href="#services" onClick={page2}>Services</a></li>
   const ContactButton = () => <li className = {location.pathname === '/' ? 'hidden' : ''}><a href="#contact">Contact</a></li>
@@ -36,16 +36,12 @@ const Toolbar = () => {
       <div className="toolbar__logo">Hana Glass-Choi</div>
       <nav className={`toolbar__nav ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="./">Home</a></li>
-          {location.pathname === '/' && <WorksButton />}
           {location.pathname === '/portfolio' && <AboutButton />}
           {location.pathname === '/portfolio' && <ServicesButton />}
           {location.pathname === '/portfolio' && <ContactButton />}
         </ul>
       </nav>
-      <div className="toolbar__toggle-button" onMouseEnter={handleToggle}>
-        ☰
-      </div>
+      <FloatingMenu />
     </header>
   );
 };

@@ -7,15 +7,18 @@
   padding: 0 20px;
   height: 60px;
   color: #333;
+  width: 100vw;
+
 }
 
-.toolbar__logo {
-  font-size: 24px;
-}
+
+
 
 .toolbar__nav ul {
   list-style: none;
   display: flex;
+  width: 50vw;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
